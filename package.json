@@ -1,0 +1,35 @@
+{
+  "name": "pixel-reminder",
+  "version": "1.0.0",
+  "description": "A cute pixel-style reminder app with system tray integration",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "build": {
+    "appId": "com.reminder.app",
+    "productName": "Pixel Reminder",
+    "files": [
+      "main.js",
+      "preload.js",
+      "reminder-logic.js",
+      "index.html",
+      "assets/**/*"
+    ],
+    "win": {
+      "certificateFile": null,
+      "certificatePassword": null,
+      "signingHashAlgorithms": [],
+      "sign": null,
+      "target": [
+        "dir"
+      ]
+    }
+  }
+}
